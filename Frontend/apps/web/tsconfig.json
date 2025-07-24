@@ -1,0 +1,22 @@
+{
+	"extends": "@ikseer/config/tsconfig.json",
+	"compilerOptions": {
+		"jsx": "preserve",
+		"plugins": [
+			{
+				"name": "next"
+			}
+		],
+		"paths": {
+			"@/*": ["./*"],
+			"@app/*": ["./app/[locale]/*"]
+		}
+	},
+	"include": [
+		"**/*.ts",
+		"**/*.tsx",
+		".next/types/**/*.ts",
+		"app/[locale]/pharmacies/page.tsx"
+	],
+	"exclude": ["node_modules", ".next", ".turbo"]
+}
